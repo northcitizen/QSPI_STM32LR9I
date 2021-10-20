@@ -759,7 +759,7 @@ void QSPI_Array_32(uint32_t* data, uint32_t address, uint32_t size)
 
 		Reset(cs);
 		SPI_Instruction(q_page_program);
-		SPI_Address(address+(0x100*e));
+		SPI_Address(address+(	0x100*e));
 		for(t; t<((e+1)*64); t++) QSPI_32_T(data[t]);
 		Set(cs);
 
